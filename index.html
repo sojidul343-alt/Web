@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My personal portfolio website">
+  <title>My Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f4f6ff;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #11182b;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      color: #72e5d1;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: #f4f6ff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #72e5d1;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 55px 8%;
+      background: radial-gradient(
+        circle at top,
+        #25345b,
+        #0b1020 70%
+      );
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 9vw, 65px);
+      margin: 12px 0;
+    }
+
+    .hero h1 span {
+      color: #72e5d1;
+    }
+
+    .hero p {
+      max-width: 550px;
+      color: #bdc7df;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 20px 7px 0;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: #72e5d1;
+      color: #101629;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid #72e5d1;
+      color: #72e5d1;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 25px;
+      color: #72e5d1;
+    }
+
+    .about {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      color: #cbd3e7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 22px;
+      border-radius: 14px;
+      background: #151e33;
+      border: 1px solid #27334e;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .card h3 {
+      color: #72e5d1;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      color: #aeb9d0;
+      background: #11182b;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">MY PORTFOLIO</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p>Hello, welcome to my website!</p>
+
+      <h1>I'm <span>Your Name</span></h1>
+
+      <p>
+        I'm learning web development and building
+        creative projects with HTML, CSS and JavaScript.
+      </p>
+
+      <a class="button" href="#projects">My Projects</a>
+      <a class="button secondary" href="#contact">Contact Me</a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+
+      <div class="about">
+        <p>
+          Hi! I'm Your Name. I'm a beginner web developer
+          who loves technology, coding and creative ideas.
+          This is my personal space on the internet.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>My Skills</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>HTML</h3>
+          <p>Webpage structure</p>
+        </div>
+
+        <div class="card">
+          <h3>CSS</h3>
+          <p>Design and layout</p>
+        </div>
+
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>Interactive features</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>My First Website</h3>
+          <p>A responsive website made with HTML and CSS.</p>
+        </div>
+
+        <div class="card">
+          <h3>Coming Soon</h3>
+          <p>More projects will be added here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>You can contact me through email.</p>
+
+      <a class="button"
+         href="mailto:sojidul343@gmail.com">
+        Send Email
+      </a>
+      <a class="button"
+      href="_blank:https://t.me/copy_2for:"> Telegram
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+
+ 
